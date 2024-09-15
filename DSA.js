@@ -19,8 +19,8 @@ let h = 8;
 // }
 
 //Binary Search
-let nums = [-1, 0, 3, 5, 9, 12],
-  target = 9;
+// let nums = [-1, 0, 3, 5, 9, 12],
+//   target = 9;
 
 const binarySearch = (nums, target) => {
   let S = 0,
@@ -44,3 +44,32 @@ const binarySearch = (nums, target) => {
 // binarySearch(nums, target);
 
 //33. Search in Rotated Sorted Array
+let nums = [4, 5, 6, 7, 0, 1, 2],
+  target = 0;
+
+var search = function (nums, target) {
+  let S = 0,
+    E = nums.length - 1;
+
+  while (S <= E) {
+    let Mid = Math.ceil((S + E) / 2);
+    if (nums[Mid] === target) {
+      console.log(Mid);
+      return;
+    }
+    if (target >= nums[0] && nums[Mid] < nums[0]) {
+      E = Mid - 1;
+    } else if (target < nums[0] && nums[Mid] >= nums[0]) {
+      S = Mid + 1;
+    } else {
+      if (target < nums[Mid]) {
+        E = Mid - 1;
+      } else {
+        S = Mid + 1;
+      }
+    }
+  }
+  console.log(-1);
+};
+
+search(nums, target);
