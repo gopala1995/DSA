@@ -44,8 +44,8 @@ const binarySearch = (nums, target) => {
 // binarySearch(nums, target);
 
 //33. Search in Rotated Sorted Array
-let nums = [4, 5, 6, 7, 0, 1, 2],
-  target = 0;
+// let nums = [4, 5, 6, 7, 0, 1, 2],
+target = 0;
 
 var search = function (nums, target) {
   let S = 0,
@@ -75,3 +75,14 @@ var search = function (nums, target) {
 // search(nums, target);
 
 //74. Search a 2D Matrix
+
+const nums = [1, 2, 3, 4];
+let res = 1;
+for (let i = 0; i < nums.length; i++) {
+  res = res * nums[i];
+}
+let ans = [];
+for (let i = 0; i < nums.length; i++) {
+  ans.push(res / nums[i]);
+}
+console.log(ans);
