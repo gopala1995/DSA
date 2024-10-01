@@ -85,4 +85,4 @@ let ans = [];
 for (let i = 0; i < nums.length; i++) {
   ans.push(res / nums[i]);
 }
-console.log(ans);
+// console.log(ans);
