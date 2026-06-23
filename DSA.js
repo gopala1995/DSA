@@ -86,3 +86,21 @@ for (let i = 0; i < nums.length; i++) {
   ans.push(res / nums[i]);
 }
 // console.log(ans);
+
+
+let A = [1, 2, 3, 4,10 ,12,3,4,22,1,2];
+let K = 34
+
+const fun = (A, k) => {
+for(let i=0;i<A.length;i++){
+  for(let j=i+1;j<A.length;j++){
+
+    if(A[i] + A[j] === k){
+      return ([A[i], A[j]]);
+    }
+  }
+}
+  return false;
+
+}
+console.log(fun(A, K));

@@ -6,14 +6,12 @@ const getSubarraySum = (num, k) => {
     let N = num.length;
     let result = -Infinity;
 
-   for(let i=0;i<N-k;i++){
+   for(let i=0;i<k;i++){
    let sum = 0;
-   var ans = []
 
     for(let j=i;j<i+k;j++){
         
            sum +=  num[j]    
-           ans.push(num[j]) 
         
      if(sum > result){
         result = sum
@@ -21,7 +19,7 @@ const getSubarraySum = (num, k) => {
         
     }
   }
-  console.log(result, ans)
+  console.log(result)
 }
 
 
