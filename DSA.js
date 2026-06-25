@@ -2,11 +2,10 @@ let arr = [
   2, 3, 4, 4, 5, 6, 6, 6, 7, 7, -1, -7, -7, -7, 8, 8, 8, 13, 2, 4, 4, 10,
 ];
 
-const Unique = arr
-  .filter((el, index) => arr.indexOf(el) === index)
+const Unique = arr.filter((el,index) => arr.indexOf(el) === index)
   .sort((a, b) => a - b);
 
-// console.log(Unique);
+console.log(Unique);
 
 const piles = [30, 11, 23, 4, 20];
 let Max = Math.max(...piles);
@@ -103,4 +102,4 @@ for(let i=0;i<A.length;i++){
   return false;
 
 }
-console.log(fun(A, K));
+// console.log(fun(A, K));
